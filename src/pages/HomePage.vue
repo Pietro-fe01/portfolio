@@ -21,12 +21,12 @@
                 <div class="project__card col-6" v-for="project in this.projects">
                     <!-- project image -->
                     <a :href="project.link" target="_blank">
-                    <img class="w-100" :src="project.img" alt="ciao">
+                        <img class="w-100" :src="project.img" alt="ciao">
                     </a>
         
                     <!-- project info -->
-                    <div class="project__info">
-                        {{ project.name }}
+                    <div class="project__info bg-white text-dark">
+                        <h4>{{ project.name }}</h4>
                         <small class="d-block text-muted">
                             <span v-for="(technology, i) in project.technologies">
                                 {{ project.technologies.length - 1 === i ? technology + '.' : technology + ', ' }} 
@@ -107,5 +107,10 @@
         height: 190px;
         object-fit: cover;
         object-position: top;
+        display: block;
+    }
+    .project__info {
+        margin-bottom: 35px;
+        padding: 10px;
     }
 </style>

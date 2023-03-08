@@ -3,7 +3,7 @@
 -------------------------*/
 .ms-container {
     width: 100%;
-    max-width: 1550px;
+    max-width: 1350px;
     margin: auto;
 }
 
@@ -27,6 +27,9 @@
 .text-white {
     color: white;
 }
+.text-dark{
+    color: black;
+}
 .text-muted {
     color:#777;
 }
@@ -35,6 +38,13 @@
 }
 .text-center {
     text-align: center;
+}
+
+/*-------------------------
+    BACKGROUND
+-------------------------*/
+.bg-white {
+    background-color: white;
 }
 
 /*-------------------------
