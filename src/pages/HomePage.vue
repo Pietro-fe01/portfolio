@@ -21,7 +21,7 @@
                 <div class="project__card col-6" v-for="project in this.projects">
                     <!-- project image -->
                     <a :href="project.link" target="_blank">
-                    <img class="w-100" :src="`src/assets/${project.img}`" alt="ciao">
+                    <img class="w-100" :src="project.img" alt="ciao">
                     </a>
         
                     <!-- project info -->
@@ -48,37 +48,37 @@
                 {
                     name: 'Boolzapp | Whatsapp Web',
                     link: 'https://pietro-fe01.github.io/vue-boolzapp/',
-                    img: 'whatsapp-web2.png',
+                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/whatsapp-web2.png',
                     technologies: ['Html', 'Css', 'Javascript', 'Vue.js']
                 },
                 {
                     name: 'Boolify | Spotify web',
                     link: 'https://pietro-fe01.github.io/html-css-spotifyweb/',
-                    img: 'spotify-web.png',
+                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/spotify-web.png',
                     technologies: ['Html', 'Css']
                 },
                 {
                     name: 'Discord',
                     link: 'https://pietro-fe01.github.io/htmlcss-discord/',
-                    img: 'discord.png',
+                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/discord.png',
                     technologies: ['Html', 'Css']
                 },
                 {
                     name: 'Dropbox',
                     link: 'https://pietro-fe01.github.io/htmlcss-dropbox/',
-                    img: 'dropbox.png',
+                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/dropbox.png',
                     technologies: ['Html', 'Css']
                 },
                 {
                     name: 'Minesweeper',
                     link: 'https://pietro-fe01.github.io/js-campominato/',
-                    img: 'campo-minato.png',
+                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/campo-minato.png',
                     technologies: ['Html', 'Css', 'Javascript']
                 },
                 {
                     name: 'ToDo list',
                     link: 'https://pietro-fe01.github.io/vue-todolist/',
-                    img: 'todo-list-interactive.png',
+                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/todo-list-interactive.png',
                     technologies: ['Html', 'Css', 'Javascript']
                 },
                 ]
