@@ -1,0 +1,67 @@
+/*-------------------------
+    CONTAINER 
+-------------------------*/
+.ms-container {
+    width: 100%;
+    max-width: 1550px;
+    margin: auto;
+}
+
+/*-------------------------
+    WIDTH & HEIGHT
+-------------------------*/
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+.col-6 {
+    width: calc(100% / 2);
+    padding: 0 15px;
+}
+
+/*-------------------------
+    TEXT
+-------------------------*/
+.text-white {
+    color: white;
+}
+.text-muted {
+    color:#777;
+}
+.text-decoration-none {
+    text-decoration: none;
+}
+.text-center {
+    text-align: center;
+}
+
+/*-------------------------
+    DISPLAY
+-------------------------*/
+.d-block {
+    display: block;
+}
+
+/*-------------------------
+    FLEX
+-------------------------*/
+.d-flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.justify-content-center {
+    justify-content: center;
+} 
+.align-items-center {
+    align-items: center;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
