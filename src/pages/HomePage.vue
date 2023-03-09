@@ -4,9 +4,9 @@
         <div class="d-flex flex-column justify-content-center align-items-center text-white h-100">
             <h1>Pietro Fecarotta</h1>
     
-            <a class="text-decoration-none text-white" href="https://onedrive.live.com/?cid=CDC3D5BF6FB4B00E&id=CDC3D5BF6FB4B00E%2196075&parId=CDC3D5BF6FB4B00E%2175839&o=OneUp" target="_blank">
-            <i class="fa-solid fa-cloud-arrow-down"></i>
-            Download CV
+            <a class="open-cv-button text-decoration-none text-white" href="https://onedrive.live.com/?cid=CDC3D5BF6FB4B00E&id=CDC3D5BF6FB4B00E%2196075&parId=CDC3D5BF6FB4B00E%2175839&o=OneUp" target="_blank">
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+                Open CV
             </a>
         </div>
     </section>
@@ -14,7 +14,7 @@
     <!-- Projects -->
     <section id="homepage__projects" class="text-white">
         <div class="ms-container">
-            <h3 class="text-center">MY PROJECTS</h3>
+            <h2 class="text-center text-dark m-text-cursive">My projects</h2>
         
             <div class="projects__container d-flex flex-wrap">
                 <!-- Project card -->
@@ -25,9 +25,9 @@
                     </a>
         
                     <!-- project info -->
-                    <div class="project__info bg-white text-dark">
+                    <div class="project__info text-dark">
                         <h4>{{ project.name }}</h4>
-                        <small class="d-block text-muted">
+                        <small class="d-block text-white-alpha">
                             <span v-for="(technology, i) in project.technologies">
                                 {{ project.technologies.length - 1 === i ? technology + '.' : technology + ', ' }} 
                             </span>
@@ -88,29 +88,57 @@
 </script>
 
 <style scoped>
+    /*--- HERO ---*/
     #homepage__hero {
-        background-image: url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHNwYXppb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+        background-image: url("https://img.freepik.com/free-vector/gatsby-patterned-frame_53876-91720.jpg?w=996&t=st=1678364213~exp=1678364813~hmac=bf67f4f3bd81c8ff575425525c35ca9747be356c4e09ae3e3fe44512604a0291");
         width: 100%;
         background-repeat: no-repeat;
+        background-position: center;
         object-fit: cover;
         height: calc(100vh - 70px);
         background-size: 100%;
     }
-    #homepage__projects {
-        padding: 70px 0;
+    #homepage__hero .open-cv-button {
         background-color: black;
+        padding: 8px 20px;
+        border-radius: 15px;
     }
-    h3 {
+    #homepage__hero .open-cv-button:hover {
+        background-color: black;
+        padding: 8px 20px;
+        border-radius: 15px;
+    }
+    #homepage__hero .open-cv-button i {
+        margin-right: 5px;
+    }
+    
+    /*--- PROJECTS ---*/
+    #homepage__projects {
+        padding: 40px 0 60px 0;
+        background-color: white;
+    }
+    h2 {
         margin-bottom: 30px;
+        font-size: 45px;
+    }
+    .project__card {
+        position: relative;
+        margin-bottom: 35px;
+    }
+    .project__info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        margin: 0 15px;
     }
     img {
-        height: 190px;
+        height: 250px;
         object-fit: cover;
         object-position: top;
         display: block;
-    }
-    .project__info {
-        margin-bottom: 35px;
-        padding: 10px;
     }
 </style>
