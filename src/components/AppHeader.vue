@@ -51,7 +51,7 @@
     <header>
         <div class="ms-container d-flex justify-content-between">
             <router-link :to="{ name: 'homepage' }" class="text-decoration-none text-white" @click="scrollPage('toTop')">
-                <img src="https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/logo.jpg" alt="" style="width: 70px;">
+                <img src="https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/loghi/logo.jpg" alt="" style="width: 70px;">
             </router-link>
 
             <nav class="menu">
