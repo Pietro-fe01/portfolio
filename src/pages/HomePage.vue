@@ -45,42 +45,54 @@
         data() {
             return {
                 projects: [
-                {
-                    name: 'Boolzapp | Whatsapp Web',
-                    link: 'https://pietro-fe01.github.io/vue-boolzapp/',
-                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/whatsapp-web2.png',
-                    technologies: ['Html', 'Css', 'Javascript', 'Vue.js']
-                },
-                {
-                    name: 'Boolify | Spotify web',
-                    link: 'https://pietro-fe01.github.io/html-css-spotifyweb/',
-                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/spotify-web.png',
-                    technologies: ['Html', 'Css']
-                },
-                {
-                    name: 'Discord',
-                    link: 'https://pietro-fe01.github.io/htmlcss-discord/',
-                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/discord.png',
-                    technologies: ['Html', 'Css']
-                },
-                {
-                    name: 'Dropbox',
-                    link: 'https://pietro-fe01.github.io/htmlcss-dropbox/',
-                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/dropbox.png',
-                    technologies: ['Html', 'Css']
-                },
-                {
-                    name: 'Minesweeper',
-                    link: 'https://pietro-fe01.github.io/js-campominato/',
-                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/campo-minato.png',
-                    technologies: ['Html', 'Css', 'Javascript']
-                },
-                {
-                    name: 'ToDo list',
-                    link: 'https://pietro-fe01.github.io/vue-todolist/',
-                    img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/todo-list-interactive.png',
-                    technologies: ['Html', 'Css', 'Javascript']
-                },
+                    {
+                        name: 'Boolzapp | Whatsapp Web',
+                        link: 'https://pietro-fe01.github.io/vue-boolzapp/',
+                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/whatsapp-web2.png',
+                        technologies: ['Html', 'Css', 'Javascript', 'Vue.js']
+                    },
+                    {
+                        name: 'Boolify | Spotify web',
+                        link: 'https://pietro-fe01.github.io/html-css-spotifyweb/',
+                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/spotify-web.png',
+                        technologies: ['Html', 'Css']
+                    },
+                    {
+                        name: 'Discord',
+                        link: 'https://pietro-fe01.github.io/htmlcss-discord/',
+                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/discord.png',
+                        technologies: ['Html', 'Css']
+                    },
+                    {
+                        name: 'Dropbox',
+                        link: 'https://pietro-fe01.github.io/htmlcss-dropbox/',
+                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/dropbox.png',
+                        technologies: ['Html', 'Css']
+                    },
+                    {
+                        name: 'Minesweeper',
+                        link: 'https://pietro-fe01.github.io/js-campominato/',
+                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/campo-minato.png',
+                        technologies: ['Html', 'Css', 'Javascript']
+                    },
+                    {
+                        name: 'ToDo list',
+                        link: 'https://pietro-fe01.github.io/vue-todolist/',
+                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/todo-list-interactive.png',
+                        technologies: ['Html', 'Css', 'Javascript']
+                    },
+                    {
+                        name: 'Boolando | Zalando',
+                        link: 'https://pietro-fe01.github.io/html-css-boolando/',
+                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/todo-list-interactive.png',
+                        technologies: ['Html', 'Css']
+                    },
+                    {
+                        name: 'Boolean academy',
+                        link: 'https://pietro-fe01.github.io/html-css-resp-wannabe/',
+                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/todo-list-interactive.png',
+                        technologies: ['Html', 'Css']
+                    },
                 ]
             }
         }
