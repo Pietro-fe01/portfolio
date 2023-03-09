@@ -113,7 +113,7 @@
 
 <style scoped>
     footer {
-        background-color: black;
+        background-color: #231f20;
         color: white;
         padding: 40px 0 ;
     }

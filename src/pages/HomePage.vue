@@ -1,8 +1,8 @@
 <template>
     <!-- Hero -->
     <section id="homepage__hero">
-        <div class="d-flex flex-column justify-content-center align-items-center text-white h-100">
-            <h1>Pietro Fecarotta</h1>
+        <div class="hero__content d-flex flex-column justify-content-center align-items-center text-white h-100">
+            <!-- <h1>Pietro Fecarotta</h1> -->
     
             <a class="open-cv-button text-decoration-none text-white" href="https://onedrive.live.com/?cid=CDC3D5BF6FB4B00E&id=CDC3D5BF6FB4B00E%2196075&parId=CDC3D5BF6FB4B00E%2175839&o=OneUp" target="_blank">
                 <i class="fa-solid fa-cloud-arrow-down"></i>
@@ -90,13 +90,17 @@
 <style scoped>
     /*--- HERO ---*/
     #homepage__hero {
-        background-image: url("https://img.freepik.com/free-vector/gatsby-patterned-frame_53876-91720.jpg?w=996&t=st=1678364213~exp=1678364813~hmac=bf67f4f3bd81c8ff575425525c35ca9747be356c4e09ae3e3fe44512604a0291");
+        background-image: url("https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/jumbotron-2.jpg");
         width: 100%;
         background-repeat: no-repeat;
         background-position: center;
         object-fit: cover;
         height: calc(100vh - 70px);
         background-size: 100%;
+    }
+    .hero__content {
+        position: relative;
+        top: 170px;
     }
     #homepage__hero .open-cv-button {
         background-color: black;

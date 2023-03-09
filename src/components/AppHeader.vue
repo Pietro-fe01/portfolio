@@ -51,7 +51,7 @@
     <header>
         <div class="ms-container d-flex justify-content-between">
             <router-link :to="{ name: 'homepage' }" class="text-decoration-none text-white" @click="scrollPage('toTop')">
-                <span class="title-portfolio m-text-cursive">Portfolio</span>
+                <img src="https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/logo.jpg" alt="" style="width: 70px;">
             </router-link>
 
             <nav class="menu">
@@ -79,7 +79,7 @@
         filter: drop-shadow(0px -8px 8px white);
         height: 70px;
         line-height: 70px;
-        background-color: black;
+        background-color: #231f20;
         color: white;
     }
     header .title-portfolio {
