@@ -106,4 +106,12 @@
         box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
         z-index: 10;
     }
+/*-------------------------------------
+    RESPONSIVE 
+--------------------------------------*/
+    @media screen and (max-width: 1350px) {
+        header h2 {
+            padding-right: 10px;
+        }
+    }
 </style>
