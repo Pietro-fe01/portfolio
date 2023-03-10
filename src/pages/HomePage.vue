@@ -27,13 +27,21 @@
                     </a>
         
                     <!-- project info -->
-                    <div class="project__info text-dark">
-                        <h4>{{ project.name }}</h4>
-                        <small class="d-block text-white-alpha">
-                            <span v-for="(technology, i) in project.technologies">
-                                {{ project.technologies.length - 1 === i ? technology + '.' : technology + ', ' }} 
+                    <div class="project__info text-dark d-flex justify-content-between align-items-center">
+                        <div>
+                            <h4>{{ project.name }}</h4>
+                            <small class="d-block text-white-alpha">
+                                <span v-for="(technology, i) in project.technologies">
+                                    {{ project.technologies.length - 1 === i ? technology + '.' : technology + ', ' }} 
+                                </span>
+                            </small>
+                        </div>
+
+                        <div class="project__responsive">
+                            <span v-for="responsive in project.responsive">
+                                <span class="device-icon" :class="responsive.status ? 'device-icon-green' : 'device-icon-red' " v-html="responsive.device"></span>
                             </span>
-                        </small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -61,36 +69,120 @@
                             name: 'Boolzapp | Whatsapp Web',
                             link: 'https://pietro-fe01.github.io/vue-boolzapp/',
                             img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/whatsapp-web2.png',
+                            responsive: [
+                                {
+                                    device: '<i class="fa-solid fa-mobile-screen-button"></i>', 
+                                    status: false
+                                },
+                                {
+                                    device: '<i class="fa-solid fa-tablet-screen-button"></i>',
+                                    status: true
+                                },
+                                {
+                                    device:  '<i class="fa-solid fa-display"></i>', 
+                                    status: true
+                                }
+                            ],
                             technologies: ['Html', 'Css', 'Javascript', 'Vue.js']
                         },
                         {
                             name: 'Boolify | Spotify web',
                             link: 'https://pietro-fe01.github.io/html-css-spotifyweb/',
                             img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/spotify-web.png',
+                            responsive: [
+                                {
+                                    device: '<i class="fa-solid fa-mobile-screen-button"></i>', 
+                                    status: false
+                                },
+                                {
+                                    device: '<i class="fa-solid fa-tablet-screen-button"></i>',
+                                    status: true
+                                },
+                                {
+                                    device:  '<i class="fa-solid fa-display"></i>', 
+                                    status: true
+                                }
+                            ],
                             technologies: ['Html', 'Css']
                         },
                         {
                             name: 'Discord',
                             link: 'https://pietro-fe01.github.io/htmlcss-discord/',
                             img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/discord.png',
+                            responsive: [
+                                {
+                                    device: '<i class="fa-solid fa-mobile-screen-button"></i>', 
+                                    status: false
+                                },
+                                {
+                                    device: '<i class="fa-solid fa-tablet-screen-button"></i>',
+                                    status: false
+                                },
+                                {
+                                    device:  '<i class="fa-solid fa-display"></i>', 
+                                    status: true
+                                }
+                            ],
                             technologies: ['Html', 'Css']
                         },
                         {
                             name: 'Dropbox',
                             link: 'https://pietro-fe01.github.io/htmlcss-dropbox/',
                             img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/dropbox.png',
+                            responsive: [
+                                {
+                                    device: '<i class="fa-solid fa-mobile-screen-button"></i>', 
+                                    status: false
+                                },
+                                {
+                                    device: '<i class="fa-solid fa-tablet-screen-button"></i>',
+                                    status: false
+                                },
+                                {
+                                    device:  '<i class="fa-solid fa-display"></i>', 
+                                    status: true
+                                }
+                            ],
                             technologies: ['Html', 'Css']
                         },
                         {
                             name: 'Minesweeper',
                             link: 'https://pietro-fe01.github.io/js-campominato/',
                             img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/campo-minato.png',
+                            responsive: [
+                                {
+                                    device: '<i class="fa-solid fa-mobile-screen-button"></i>', 
+                                    status: true
+                                },
+                                {
+                                    device: '<i class="fa-solid fa-tablet-screen-button"></i>',
+                                    status: true
+                                },
+                                {
+                                    device:  '<i class="fa-solid fa-display"></i>', 
+                                    status: true
+                                }
+                            ],
                             technologies: ['Html', 'Css', 'Javascript']
                         },
                         {
                             name: 'ToDo list',
                             link: 'https://pietro-fe01.github.io/vue-todolist/',
                             img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/todo-list-interactive.png',
+                            responsive: [
+                                {
+                                    device: '<i class="fa-solid fa-mobile-screen-button"></i>', 
+                                    status: false
+                                },
+                                {
+                                    device: '<i class="fa-solid fa-tablet-screen-button"></i>',
+                                    status: true
+                                },
+                                {
+                                    device:  '<i class="fa-solid fa-display"></i>', 
+                                    status: true
+                                }
+                            ],
                             technologies: ['Html', 'Css', 'Javascript']
                         },
                     ],
@@ -99,24 +191,80 @@
                             name: 'Boolando | Zalando',
                             link: 'https://pietro-fe01.github.io/html-css-boolando/',
                             img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/boolando.png',
+                            responsive: [
+                                {
+                                    device: '<i class="fa-solid fa-mobile-screen-button"></i>', 
+                                    status: false
+                                },
+                                {
+                                    device: '<i class="fa-solid fa-tablet-screen-button"></i>',
+                                    status: true
+                                },
+                                {
+                                    device:  '<i class="fa-solid fa-display"></i>', 
+                                    status: true
+                                }
+                            ],
                             technologies: ['Html', 'Css']
                         },
                         {
                             name: 'Boolean academy',
                             link: 'https://pietro-fe01.github.io/html-css-resp-wannabe/',
                             img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/boolean-academy.png',
+                            responsive: [
+                                {
+                                    device: '<i class="fa-solid fa-mobile-screen-button"></i>', 
+                                    status: true
+                                },
+                                {
+                                    device: '<i class="fa-solid fa-tablet-screen-button"></i>',
+                                    status: true
+                                },
+                                {
+                                    device:  '<i class="fa-solid fa-display"></i>', 
+                                    status: true
+                                }
+                            ],
                             technologies: ['Html', 'Css']
                         },
                         {
                             name: 'Social posts',
                             link: 'https://pietro-fe01.github.io/js-social-posts/',
                             img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/social-posts.png',
+                            responsive: [
+                                {
+                                    device: '<i class="fa-solid fa-mobile-screen-button"></i>', 
+                                    status: true
+                                },
+                                {
+                                    device: '<i class="fa-solid fa-tablet-screen-button"></i>',
+                                    status: true
+                                },
+                                {
+                                    device:  '<i class="fa-solid fa-display"></i>', 
+                                    status: true
+                                }
+                            ],
                             technologies: ['Html', 'Css', 'Javascript']
                         },
                         {
                             name: 'Vue slider',
                             link: 'https://pietro-fe01.github.io/vue-slider/',
                             img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/vue-slider.png',
+                            responsive: [
+                                {
+                                    device: '<i class="fa-solid fa-mobile-screen-button"></i>', 
+                                    status: false
+                                },
+                                {
+                                    device: '<i class="fa-solid fa-tablet-screen-button"></i>',
+                                    status: false
+                                },
+                                {
+                                    device:  '<i class="fa-solid fa-display"></i>', 
+                                    status: true
+                                }
+                            ],
                             technologies: ['Html', 'Css', 'Javascript', 'Vue.js']
                         },
                     ],
@@ -217,6 +365,21 @@
         color: white;
         padding: 10px;
         margin: 0 15px;
+    }
+    .project__responsive .device-icon {
+        margin-left: 15px;
+    }
+    .project__responsive .device-icon-red {
+        color: #ff5a36;
+        border: 1px solid #ff5a36;
+        border-radius: 50%;
+        padding: 5px 9px;
+    }
+    .project__responsive .device-icon-green {
+        color: lime;
+        border: 1px solid lime;
+        border-radius: 50%;
+        padding: 5px 9px;
     }
     .pagination-section .pagination__square {
         width: 30px;
