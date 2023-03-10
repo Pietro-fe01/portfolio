@@ -18,7 +18,7 @@
         
             <div class="projects__container d-flex flex-wrap">
                 <!-- Project card -->
-                <div class="project__card col-6" v-for="project in this.projects">
+                <div class="project__card col-6" v-for="project in this.projects[this.currentPageNumber]">
                     <!-- project image -->
                     <a :href="project.link" target="_blank">
                         <img class="w-100" :src="project.img" alt="ciao">
@@ -35,6 +35,14 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Pagination section -->
+            <div class="pagination-section text-dark d-flex justify-content-center">
+                <div class="pagination__square" 
+                v-for="num in Object.keys(this.projects).length" 
+                @click="changeProjectsPagination(num)"
+                :class="this.currentPageNumber === num ? 'pagination-active' : '' ">{{ num }}</div>
+            </div>
         </div>
     </section>
 </template>
@@ -44,56 +52,82 @@
         name: "HomePage",
         data() {
             return {
-                projects: [
-                    {
-                        name: 'Boolzapp | Whatsapp Web',
-                        link: 'https://pietro-fe01.github.io/vue-boolzapp/',
-                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/whatsapp-web2.png',
-                        technologies: ['Html', 'Css', 'Javascript', 'Vue.js']
-                    },
-                    {
-                        name: 'Boolify | Spotify web',
-                        link: 'https://pietro-fe01.github.io/html-css-spotifyweb/',
-                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/spotify-web.png',
-                        technologies: ['Html', 'Css']
-                    },
-                    {
-                        name: 'Discord',
-                        link: 'https://pietro-fe01.github.io/htmlcss-discord/',
-                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/discord.png',
-                        technologies: ['Html', 'Css']
-                    },
-                    {
-                        name: 'Dropbox',
-                        link: 'https://pietro-fe01.github.io/htmlcss-dropbox/',
-                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/dropbox.png',
-                        technologies: ['Html', 'Css']
-                    },
-                    {
-                        name: 'Minesweeper',
-                        link: 'https://pietro-fe01.github.io/js-campominato/',
-                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/campo-minato.png',
-                        technologies: ['Html', 'Css', 'Javascript']
-                    },
-                    {
-                        name: 'ToDo list',
-                        link: 'https://pietro-fe01.github.io/vue-todolist/',
-                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/todo-list-interactive.png',
-                        technologies: ['Html', 'Css', 'Javascript']
-                    },
-                    {
-                        name: 'Boolando | Zalando',
-                        link: 'https://pietro-fe01.github.io/html-css-boolando/',
-                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/todo-list-interactive.png',
-                        technologies: ['Html', 'Css']
-                    },
-                    {
-                        name: 'Boolean academy',
-                        link: 'https://pietro-fe01.github.io/html-css-resp-wannabe/',
-                        img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/todo-list-interactive.png',
-                        technologies: ['Html', 'Css']
-                    },
-                ]
+                currentPageNumber: 1,
+                projects: {
+                    1: [
+                        {
+                            name: 'Boolzapp | Whatsapp Web',
+                            link: 'https://pietro-fe01.github.io/vue-boolzapp/',
+                            img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/whatsapp-web2.png',
+                            technologies: ['Html', 'Css', 'Javascript', 'Vue.js']
+                        },
+                        {
+                            name: 'Boolify | Spotify web',
+                            link: 'https://pietro-fe01.github.io/html-css-spotifyweb/',
+                            img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/spotify-web.png',
+                            technologies: ['Html', 'Css']
+                        },
+                        {
+                            name: 'Discord',
+                            link: 'https://pietro-fe01.github.io/htmlcss-discord/',
+                            img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/discord.png',
+                            technologies: ['Html', 'Css']
+                        },
+                        {
+                            name: 'Dropbox',
+                            link: 'https://pietro-fe01.github.io/htmlcss-dropbox/',
+                            img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/dropbox.png',
+                            technologies: ['Html', 'Css']
+                        },
+                        {
+                            name: 'Minesweeper',
+                            link: 'https://pietro-fe01.github.io/js-campominato/',
+                            img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/campo-minato.png',
+                            technologies: ['Html', 'Css', 'Javascript']
+                        },
+                        {
+                            name: 'ToDo list',
+                            link: 'https://pietro-fe01.github.io/vue-todolist/',
+                            img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/todo-list-interactive.png',
+                            technologies: ['Html', 'Css', 'Javascript']
+                        },
+                    ],
+                    2: [
+                        {
+                            name: 'Boolando | Zalando',
+                            link: 'https://pietro-fe01.github.io/html-css-boolando/',
+                            img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/boolando.png',
+                            technologies: ['Html', 'Css']
+                        },
+                        {
+                            name: 'Boolean academy',
+                            link: 'https://pietro-fe01.github.io/html-css-resp-wannabe/',
+                            img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/boolean-academy.png',
+                            technologies: ['Html', 'Css']
+                        },
+                        {
+                            name: 'Social posts',
+                            link: 'https://pietro-fe01.github.io/js-social-posts/',
+                            img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/social-posts.png',
+                            technologies: ['Html', 'Css', 'Javascript']
+                        },
+                        {
+                            name: 'Vue slider',
+                            link: 'https://pietro-fe01.github.io/vue-slider/',
+                            img: 'https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/project-img/vue-slider.png',
+                            technologies: ['Html', 'Css', 'Javascript', 'Vue.js']
+                        },
+                    ],
+                }
+            }
+        },
+        methods: {
+            changeProjectsPagination(pageNumber){
+                this.currentPageNumber = pageNumber;
+                window.scroll({
+                    top: 650,
+                    behavior: 'smooth'
+                })
             }
         }
     };
@@ -146,7 +180,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(35, 31, 32, 0.7);
         color: white;
         padding: 10px;
         margin: 0 15px;
@@ -156,5 +190,21 @@
         object-fit: cover;
         object-position: top;
         display: block;
+    }
+    .pagination-section .pagination__square {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        border: 1px solid black;
+        transition: all 0.4s;
+    }
+    .pagination-section .pagination__square:hover {
+        transform: scale(1.1);
+    }
+    .pagination-active {
+        background-color: #231f20;
+        color: white;
     }
 </style>
