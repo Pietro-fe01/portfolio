@@ -78,51 +78,50 @@
             </nav>
 
             <nav id="skills">
-                <ul>
-                    <h2 class="m-text-cursive">Skills</h2>
-                    <li class="d-flex align-items-center flex-wrap">
-                        <div class="d-flex flex-column align-items-center">
-                            <i class="fa-brands fa-html5"></i>
-                            <span>Html</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center">
-                            <i class="fa-brands fa-css3"></i>
-                            <span>Css</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center">
-                            <i class="fa-brands fa-bootstrap"></i>
-                            <span>Bootstrap</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center">
-                            <i class="fa-brands fa-square-js"></i>
-                            <span>Javascript</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center">
-                            <i class="fa-brands fa-vuejs"></i>
-                            <span>Vue.js</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="https://vitejs.dev/logo.svg" alt="" width="37px">
-                            <span>Vite.js</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center">
-                            <i class="fa-brands fa-php"></i>
-                            <span>Php</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center">
-                            <i class="fa-brands fa-sass"></i>
-                            <span>Sass</span>
-                        </div>                    
-                        <div class="d-flex flex-column align-items-center">
-                            <i class="fa-brands fa-laravel"></i>
-                            <span>Laravel</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center">
-                            <i class="fa-brands fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                    </li>
-                </ul>
+                <h2 class="m-text-cursive">Skills</h2>
+
+                <div class="skills-container d-flex flex-wrap">
+                    <div>
+                        <i class="fa-brands fa-html5"></i>
+                        <span>Html</span>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-css3"></i>
+                        <span>Css</span>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-square-js"></i>
+                        <span>Javascript</span>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                    <div>
+                        <img src="https://vitejs.dev/logo.svg" alt="" width="37px">
+                        <span>Vite.js</span>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-php"></i>
+                        <span>Php</span>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-sass"></i>
+                        <span>Sass</span>
+                    </div>                    
+                    <div>
+                        <i class="fa-brands fa-laravel"></i>
+                        <span>Laravel</span>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                </div>
             </nav>
         </div>
     </footer>
@@ -158,7 +157,9 @@
         margin-right: 7px;
     }
 
-    /*--- SOCIAL ---*/
+/*-------------------------------------
+    SOCIAL 
+--------------------------------------*/
     #social ul li a {
         text-decoration: none;
         color: rgba(255, 255, 255, 0.8);
@@ -173,20 +174,26 @@
 /*-------------------------------------
     SKILLS 
 --------------------------------------*/
+    #skills {
+        text-align: center;
+    }
     #skills i {
         font-size: 30px;
     }
-    #skills ul li > div {
+    #skills .skills-container > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: calc(100% / 5);
         margin-bottom: 5px;
     }
-    #skills ul li > div span {
+    #skills .skills-container > div span {
         opacity: 0;
         transition: all 0.3s;
         position: relative;
         top: -10px;
     }
-    #skills ul li > div:hover span {
+    #skills .skills-container > div:hover span {
         opacity: 1;
         top: 0;
     }
@@ -231,7 +238,6 @@
             text-align: center;
         }
         #skills {
-            text-align: center;
             margin: auto;
         }
         #skills ul li > div {

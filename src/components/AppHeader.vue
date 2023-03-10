@@ -54,17 +54,7 @@
                 <img src="https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/loghi/logo.jpg" alt="" style="width: 70px;">
             </router-link>
 
-            <!-- <nav class="menu">
-                <div class="dropdown">
-                    <button @click="openDroopdown()">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <div @click="scrollPage('toProjects')">Projects</div>
-                        <div @click="scrollPage('toContacts')">Contacts</div>
-                    </div>
-                </div>
-            </nav> -->
+            <h2 class="m-text-cursive">Portfolio</h2>
         </div>
     </header>
 </template>
