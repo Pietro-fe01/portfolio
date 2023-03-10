@@ -54,7 +54,7 @@
                 <img src="https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/loghi/logo.jpg" alt="" style="width: 70px;">
             </router-link>
 
-            <nav class="menu">
+            <!-- <nav class="menu">
                 <div class="dropdown">
                     <button @click="openDroopdown()">
                         <i class="fa-solid fa-bars"></i>
@@ -64,7 +64,7 @@
                         <div @click="scrollPage('toContacts')">Contacts</div>
                     </div>
                 </div>
-            </nav>
+            </nav> -->
         </div>
     </header>
 </template>

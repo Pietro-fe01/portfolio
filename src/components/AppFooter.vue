@@ -1,12 +1,29 @@
 <script>
     export default {
-        name: 'AppFooter'
+        name: 'AppFooter',
+        data() {
+            return {
+
+            }
+        },
+        methods: {
+            scrollPage(action) {
+                switch (action) {
+                    case 'toTop':
+                        window.scroll({
+                            top: 0,
+                            behavior: 'smooth'
+                        })
+                        break;
+                }
+            }
+        }
     }
 </script>
 
 <template>
     <footer>
-        <div class="ms-container d-flex flex-wrap justify-content-between">
+        <div class="ms-container footer-content d-flex flex-wrap justify-content-between">
             <nav id="about-me" class="w-25">
                 <ul>
                     <h2 class="m-text-cursive">About me</h2>
