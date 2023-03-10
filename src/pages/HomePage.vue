@@ -1,7 +1,7 @@
 <template>
     <!-- Hero -->
     <section id="homepage__hero">
-        <img class="w-100 h-100" src="https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/loghi/jumbotron-2.jpg" alt="">
+        <img class="w-100 h-100" src="https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/loghi/jumbotron-1.jpg" alt="">
 
         <div class="hero__content d-flex flex-column justify-content-center align-items-center text-white h-100">
             <a class="open-cv-button text-decoration-none text-white" href="https://raw.githubusercontent.com/Pietro-fe01/portfolio/8ad2e7e543f541433e601bfd69c8a61a07e10931/src/assets/pietrofecarotta-cv.pdf" download target="_blank">
