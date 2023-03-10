@@ -70,6 +70,9 @@
 </template>
 
 <style scoped>
+/*-------------------------------------
+    HEADER 
+--------------------------------------*/
     header {
         position: sticky;
         top: 0;
@@ -86,7 +89,9 @@
         font-size: 30px;
     }
 
-    /* DROPDOWN MENU */
+/*-------------------------------------
+    DROPDOWN MENU 
+--------------------------------------*/
     .dropdown {
         display: inline-block;
         position: relative;

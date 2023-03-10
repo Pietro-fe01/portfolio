@@ -1,9 +1,9 @@
 <template>
     <!-- Hero -->
     <section id="homepage__hero">
+        <img class="w-100 h-100" src="https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/loghi/jumbotron-2.jpg" alt="">
+
         <div class="hero__content d-flex flex-column justify-content-center align-items-center text-white h-100">
-            <!-- <h1>Pietro Fecarotta</h1> -->
-    
             <a class="open-cv-button text-decoration-none text-white" href="https://onedrive.live.com/?cid=CDC3D5BF6FB4B00E&id=CDC3D5BF6FB4B00E%2196075&parId=CDC3D5BF6FB4B00E%2175839&o=OneUp" target="_blank">
                 <i class="fa-solid fa-cloud-arrow-down"></i>
                 Open CV
@@ -18,10 +18,12 @@
         
             <div class="projects__container d-flex flex-wrap">
                 <!-- Project card -->
-                <div class="project__card col-6" v-for="project in this.projects[this.currentPageNumber]">
+                <div class="project__card" v-for="project in this.projects[this.currentPageNumber]">
                     <!-- project image -->
-                    <a :href="project.link" target="_blank">
-                        <img class="w-100" :src="project.img" alt="ciao">
+                    <a class="img-container" :href="project.link" target="_blank">
+                        <div class="img-hover-zoom">
+                            <img class="w-100" :src="project.img" :alt="`${project.name}-image`">
+                        </div>
                     </a>
         
                     <!-- project info -->
@@ -134,9 +136,11 @@
 </script>
 
 <style scoped>
-    /*--- HERO ---*/
+/*-------------------------------------
+    HERO 
+--------------------------------------*/
     #homepage__hero {
-        background-image: url("https://raw.githubusercontent.com/Pietro-fe01/portfolio/master/src/assets/loghi/jumbotron-2.jpg");
+        position: relative;
         width: 100%;
         background-repeat: no-repeat;
         background-position: center;
@@ -144,9 +148,14 @@
         height: calc(100vh - 70px);
         background-size: 100%;
     }
+    #homepage__hero img {
+        object-fit: cover;
+    }
     .hero__content {
-        position: relative;
-        top: 170px;
+        position: absolute;
+        top: 26%;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
     #homepage__hero .open-cv-button {
         background-color: black;
@@ -161,8 +170,10 @@
     #homepage__hero .open-cv-button i {
         margin-right: 5px;
     }
-    
-    /*--- PROJECTS ---*/
+
+/*-------------------------------------
+    PROJECTS 
+--------------------------------------*/
     #homepage__projects {
         padding: 40px 0 60px 0;
         background-color: white;
@@ -174,6 +185,28 @@
     .project__card {
         position: relative;
         margin-bottom: 35px;
+        padding: 0 15px;
+        width: calc(100% / 2);
+    }
+    .project__card img {
+        height: 250px;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+    }
+    .img-hover-zoom {
+        height: 250px; 
+        width: 100%;
+        overflow: hidden; 
+    }
+    .img-hover-zoom img {
+        transform: scale(1.4);
+        filter: blur(1px);
+        transition: all .5s ease;
+    }
+    .img-hover-zoom:hover img {
+        transform: scale(1);
+        filter: blur(0px);
     }
     .project__info {
         position: absolute;
@@ -184,12 +217,6 @@
         color: white;
         padding: 10px;
         margin: 0 15px;
-    }
-    img {
-        height: 250px;
-        object-fit: cover;
-        object-position: top;
-        display: block;
     }
     .pagination-section .pagination__square {
         width: 30px;
@@ -206,5 +233,14 @@
     .pagination-active {
         background-color: #231f20;
         color: white;
+    }
+
+/*-------------------------------------
+    RESPONSIVE 
+--------------------------------------*/
+    @media screen and (max-width: 900px) {
+        .project__card {
+            width: 100%;
+        }
     }
 </style>

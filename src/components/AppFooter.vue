@@ -6,7 +6,7 @@
 
 <template>
     <footer>
-        <div class="ms-container d-flex justify-content-between">
+        <div class="ms-container d-flex flex-wrap justify-content-between">
             <nav id="about-me" class="w-25">
                 <ul>
                     <h2 class="m-text-cursive">About me</h2>
@@ -25,7 +25,7 @@
                         <i class="fa-solid fa-phone-volume"></i> 
                         <span>+39 329 333 7059</span>
                     </li>
-                    <li>
+                    <li class="contact-email">
                         <i class="fa-solid fa-envelope"></i> 
                         <span>pietrofecarotta2001@gmail.com</span>
                     </li>
@@ -112,12 +112,16 @@
 </template>
 
 <style scoped>
+/*-------------------------------------
+    FOOTER 
+--------------------------------------*/
     footer {
         background-color: #231f20;
-        color: white;
+        color: rgba(255, 255, 255, 0.8);
         padding: 40px 0 ;
     }
     nav h2 {
+        color: white !important;
         margin-bottom: 15px;
     }
     nav ul {
@@ -130,7 +134,9 @@
         text-decoration: none;
     }
 
-    /*--- CONTACTS ---*/
+/*-------------------------------------
+    CONTACTS 
+--------------------------------------*/
     #contacts ul li i {
         margin-right: 7px;
     }
@@ -138,7 +144,7 @@
     /*--- SOCIAL ---*/
     #social ul li a {
         text-decoration: none;
-        color: white;
+        color: rgba(255, 255, 255, 0.8);
     }
     #social ul li a:hover span {
         text-decoration: underline;  
@@ -147,7 +153,9 @@
         margin-right: 7px;
     }
 
-    /*--- SKILLS ---*/
+/*-------------------------------------
+    SKILLS 
+--------------------------------------*/
     #skills i {
         font-size: 30px;
     }
@@ -191,5 +199,68 @@
     }
     #skills .fa-git-alt{
         color: #f34f29;
+    }
+
+/*-------------------------------------
+    RESPONSIVE 
+--------------------------------------*/
+    @media screen and (max-width: 1350px) {
+        footer {
+            padding: 40px 20px;
+        }
+        #about-me, #contacts, #social {
+            width: calc(100% / 3);
+            padding: 20px;
+            text-align: center;
+        }
+        #skills {
+            text-align: center;
+            margin: auto;
+        }
+        #skills ul li > div {
+            width: calc(100% / 10);
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        #about-me, #contacts {
+            width: calc(100% / 2);
+        }
+    }
+    @media screen and (max-width: 761px) {
+        #skills {
+            padding: 20px;
+        }
+        #about-me {
+            width: 100%;
+        }
+        #contacts, #social {
+            width: calc(100% / 2);
+        }
+    }
+    @media screen and (max-width: 680px) {
+        #contacts, #social {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 530px) {
+        #skills ul li > div {
+            width: calc(100% / 5);
+        }
+    }
+    @media screen and (max-width: 390px) {
+        #skills ul li > div {
+            width: calc(100% / 4);
+        }
+        .contact-email {
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 326px) {
+        #skills ul li > div {
+            width: calc(100% / 3);
+        }
+        .contact-email {
+            font-size: 12px;
+        }
     }
 </style>
