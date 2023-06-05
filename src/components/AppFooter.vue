@@ -38,10 +38,6 @@
             <nav id="contacts">
                 <ul>
                     <h2 class="m-text-cursive">Contacts</h2>
-                    <li>
-                        <i class="fa-solid fa-phone-volume"></i> 
-                        <span>+39 329 333 7059</span>
-                    </li>
                     <li class="contact-email">
                         <i class="fa-solid fa-envelope"></i> 
                         <span>pietrofecarotta2001@gmail.com</span>
