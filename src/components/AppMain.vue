@@ -1,14 +1,11 @@
-<script>
-    export default {
-        name: 'AppMain'
-    }
-</script>
-
 <template>
-    <main>
-        <router-view></router-view> 
-    </main>
+  <main class="site-main">
+    <router-view />
+  </main>
 </template>
 
 <style scoped>
+.site-main {
+  overflow: clip;
+}
 </style>

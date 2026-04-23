@@ -5,10 +5,10 @@ import HomePage from "./pages/HomePage.vue";
 import Page404 from "./pages/Page404.vue";
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-        path: "/portfolio",
+        path: "/",
         name: "homepage",
         component: HomePage,
         },
@@ -18,6 +18,23 @@ const router = createRouter({
         component: Page404,
         },
     ],
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        }
+
+        if (to.hash) {
+            return {
+                el: to.hash,
+                top: 110,
+                behavior: "smooth",
+            };
+        }
+
+        return {
+            top: 0,
+        };
+    },
 });
 
 export { router };

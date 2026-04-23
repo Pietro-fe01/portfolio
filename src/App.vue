@@ -1,22 +1,22 @@
-<script>
+<script setup>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import { initTheme } from './composables/useTheme';
 
-export default {
-  components: {
-    AppHeader,
-    AppMain,
-    AppFooter,
-  },
-};
+initTheme();
 </script>
 
 <template>
-  <AppHeader />
-  <AppMain />
-  <AppFooter />
+  <div class="app-shell">
+    <AppHeader />
+    <AppMain />
+    <AppFooter />
+  </div>
 </template>
 
 <style scoped>
+.app-shell {
+  min-height: 100vh;
+}
 </style>

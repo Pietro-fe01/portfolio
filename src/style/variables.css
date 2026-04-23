@@ -1,106 +1,61 @@
-/*-------------------------
-    CONTAINER 
--------------------------*/
-.ms-container {
-    width: 100%;
-    max-width: 2000px;
-    margin: auto;
+:root {
+  --font-body: 'Manrope', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --container-width: 1200px;
+  --header-height: 72px;
+  --radius-md: 1.2rem;
+  --radius-lg: 1.75rem;
+  --radius-xl: 2.2rem;
+  --radius-hero: 2.6rem;
+  --accent: #c8a25a;
+  --accent-strong: #9c7633;
+  --accent-warm: #e2c486;
+  --accent-rgb: 200, 162, 90;
+  --accent-strong-rgb: 156, 118, 51;
+  --accent-warm-rgb: 226, 196, 134;
 }
 
-@media screen and (max-width: 2200px) {
-    .ms-container {
-        max-width: 1800px;
-    }
-}
-@media screen and (max-width: 2000px) {
-    .ms-container {
-        max-width: 1600px;
-    }
-}
-@media screen and (max-width: 1800px) {
-    .ms-container {
-        max-width: 1400px;
-    }
-}
-@media screen and (max-width: 1550px) {
-    .ms-container {
-        max-width: 1300px;
-    }
-}
-
-/*-------------------------
-    WIDTH & HEIGHT
--------------------------*/
-.w-100 {
-    width: 100%;
-}
-.w-50 {
-    width: 50%;
-}
-.w-25 {
-    width: 25%;
-}
-.h-100 {
-    height: 100%;
+:root,
+:root[data-theme='light'] {
+  --bg-page:
+    radial-gradient(circle at top left, rgba(var(--accent-rgb), 0.16), transparent 34%),
+    radial-gradient(circle at 85% 12%, rgba(var(--accent-warm-rgb), 0.18), transparent 22%),
+    linear-gradient(180deg, #f6f1e7 0%, #f1ede6 54%, #f8f4ec 100%);
+  --text-strong: #091525;
+  --text: #1b2c3d;
+  --text-soft: #637183;
+  --text-inverse: #fbf7ee;
+  --text-inverse-soft: rgba(251, 247, 238, 0.76);
+  --line: rgba(9, 21, 37, 0.09);
+  --line-strong: rgba(251, 247, 238, 0.12);
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-solid: #fffdf8;
+  --surface-elevated: rgba(255, 255, 255, 0.86);
+  --surface-muted: rgba(9, 21, 37, 0.05);
+  --surface-contrast: linear-gradient(135deg, #0b1728 0%, #10263d 55%, #0c1b2d 100%);
+  --surface-contrast-alt: linear-gradient(135deg, rgba(9, 19, 33, 0.98), rgba(17, 32, 52, 0.95));
+  --shadow-soft: 0 24px 70px rgba(8, 20, 35, 0.1);
+  --shadow-strong: 0 36px 110px rgba(8, 20, 35, 0.22);
 }
 
-/*-------------------------
-    TEXT
--------------------------*/
-.text-white {
-    color: white;
-}
-.text-white-alpha {
-    color: rgba(255, 255, 255, 0.8);
-}
-.text-dark{
-    color: black;
-}
-.text-muted {
-    color: #777;
-}
-.text-decoration-none {
-    text-decoration: none;
-}
-.text-center {
-    text-align: center;
-}
-
-/*-------------------------
-    BACKGROUND
--------------------------*/
-.bg-white {
-    background-color: white;
-}
-
-/*-------------------------
-    DISPLAY
--------------------------*/
-.d-block {
-    display: block !important;
-}
-
-/*-------------------------
-    FLEX
--------------------------*/
-.d-flex {
-    display: flex;
-}
-.flex-column {
-    flex-direction: column;
-}
-.flex-wrap {
-    flex-wrap: wrap;
-}
-.justify-content-center {
-    justify-content: center;
-} 
-.align-items-center {
-    align-items: center;
-}
-.justify-content-between {
-    justify-content: space-between;
-}
-.justify-content-around {
-    justify-content: space-around;
+:root[data-theme='dark'] {
+  --bg-page:
+    radial-gradient(circle at top left, rgba(var(--accent-rgb), 0.12), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(var(--accent-warm-rgb), 0.12), transparent 18%),
+    linear-gradient(180deg, #08111c 0%, #0c1522 54%, #09111b 100%);
+  --text-strong: #f1f5fb;
+  --text: #d8e1ed;
+  --text-soft: #94a3b6;
+  --text-inverse: #f4f7fb;
+  --text-inverse-soft: rgba(244, 247, 251, 0.76);
+  --line: rgba(244, 247, 251, 0.1);
+  --line-strong: rgba(244, 247, 251, 0.14);
+  --surface: rgba(15, 23, 36, 0.8);
+  --surface-solid: #101b2a;
+  --surface-elevated: rgba(16, 27, 42, 0.92);
+  --surface-muted: rgba(244, 247, 251, 0.06);
+  --surface-contrast: linear-gradient(135deg, #0f1b2b 0%, #18304c 55%, #13243a 100%);
+  --surface-contrast-alt: linear-gradient(135deg, rgba(11, 20, 31, 0.98), rgba(17, 31, 47, 0.96));
+  --shadow-soft: 0 28px 90px rgba(0, 0, 0, 0.3);
+  --shadow-strong: 0 40px 120px rgba(0, 0, 0, 0.38);
 }
