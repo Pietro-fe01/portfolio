@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio di Pietro Fecarotta, Full Stack Web Developer con 3 anni di esperienza tra gestionali, prodotti verticali, NativeScript, Electron, Laravel e frontend curato."
+    />
+    <meta name="theme-color" content="#f5f1e9" />
+    <script>
+      (() => {
+        const storageKey = 'portfolio-theme-preference';
+        const savedPreference = window.localStorage.getItem(storageKey);
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const resolvedTheme =
+          savedPreference === 'light' || savedPreference === 'dark' ? savedPreference : systemTheme;
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+        document.documentElement.dataset.theme = resolvedTheme;
+        document.documentElement.style.colorScheme = resolvedTheme;
+
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute('content', resolvedTheme === 'dark' ? '#08111c' : '#f5f1e9');
+        }
+      })();
+    </script>
+    <title>Pietro Fecarotta | Full Stack Web Developer</title>
+
+    <!-- Favicon img -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/portfolio/assets/apple-touch-icon-b449d799.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACH0lEQVR4AVxRu25TURCce0hsFDuJ8yCREIKOliYNEi35gHwEEvkNOgr+gEhQ8DGhTGcpwjg48dvXT2ET7zJz7rVRKMZ7ds7M7J7r0Gw2vdVqebvd9k6n491u13u9nvf7fR8MBp6mqQ+HQx+NRj4ej30ymfh0MvXpdOqz2cyDmeEB3OGERVg8qxfMLdOyZr0jRJKE0SDSFche1c0zgzgi68nx3ggngsgMTCfhCqIxVp3X4L1CpNF9jqD112KSSm40Gri6ukK1WsWf2S0WaRWztLF+jq1CqQ8yK8SUrAuS8/kCny8ucHn5HV++fsP9tIYkPIoBUcdNVLkTv0He6BkxiH2ptIXDgwOcnr7FbWsMLz7D5tZh/B7SaWisHBZMU5f8MDQqQJdLnuv1Oj59/IDXLwPuZ3c0e75BVqUTglNsXF9mY6KxD0mCo6NjnJ89x8mrJygev8FKE/XUSBcDNG3VeB60s7OD8/P3eFyu4O5XHzI5w13brirP8mUb5IkinGcJd3d3sfXiDE9P3kG9ELfIh6gXgkzGVKNRmC8WSAcpbm5uUL3+iesfddRqNXR7Pcx/z2FLi4HSCjHA81QRQIKNzQ2UyiVUKhXs7e1je3sbxWIBSZKAdkhnfIITQT+R0AYMogaFQgHlUjma9/fzgEIRSQjQE6M518cNjE/wHKaL/+DqOU1VA2Ml5/QwQP+rwTj9n9lj7zm3pNBpeHhPjRn+AgAA///fA9qFAAAABklEQVQDAM1KoZwB7QdkAAAAAElFTkSuQmCC">
+    <link rel="icon" type="image/png" sizes="512x512" href="/portfolio/assets/android-chrome-512x512-800c761e.png">
+    <link rel="icon" type="image/x-icon" href="/portfolio/assets/favicon-0f642ee0.ico">
+    <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=">
+
+    <!-- Fonntawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" crossorigin src="/portfolio/assets/index-96360e80.js"></script>
+    <link rel="stylesheet" href="/portfolio/assets/index-5ab1a30f.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    
+    
+  </body>
+</html>
